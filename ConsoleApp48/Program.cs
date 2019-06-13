@@ -27,10 +27,12 @@ namespace ConsoleApp48
                 if (int.TryParse(nStr, out n) && int.TryParse(mStr, out m))
                 {
                    
+                     if (n > 0 && m > 0)
+                  {
                     List.AddAllPlayers(1, n);
 
                     ListElement<int> curEl = List.Head;
-                   
+
                     while (List.Count > 1)
                     {
                         ListElement<int> lastFoundEl = List.RemoveWithPosition(curEl, 1, m);
@@ -38,6 +40,9 @@ namespace ConsoleApp48
                         curEl = lastFoundEl.Next;
                     }
                     Console.WriteLine("Остался игрок с номером " + curEl.Next.Data);
+
+                  }
+                  else Console.WriteLine("Ваши элементы не могут быть отрицательными");
                 }
                 else
                 {
