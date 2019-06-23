@@ -42,7 +42,7 @@ namespace ConsoleApp48
                     Console.WriteLine("Остался игрок с номером " + curEl.Next.Data);
 
                   }
-                  else Console.WriteLine("Ваши элементы не могут быть отрицательными");
+                  else Console.WriteLine("Введено неверное значение");
                 }
                 else
                 {
